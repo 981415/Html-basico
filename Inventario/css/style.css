@@ -1,0 +1,28 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container form {
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px;
+}
+
+.box {
+    width: 750px;
+}
+
+.container table {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px;
+}
+.link-right {
+    display: flex;
+    justify-content: flex-end;
+}
