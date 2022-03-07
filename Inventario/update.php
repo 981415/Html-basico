@@ -1,5 +1,6 @@
 <?php include 'php/update.php'; ?>
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
 
@@ -13,35 +14,28 @@
 
 <body>
     <div class="container">
+
+
         <form action="php/update.php" method="post">
             <h5 class="display-4 text-center">Update</h5>
             <hr><br>
 
             <?php if (isset($_GET['error'])) { ?>
-            <div class="alert alert-danger" role="alert">
-                <?php echo $_GET['error']; ?>
-            </div>
-           <?php } ?>
+                <div class="alert alert-danger" role="alert">
+                    <?php echo $_GET['error']; ?>
+                </div>
+            <?php } ?>
 
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="name" 
-                class="form-control" 
-                id="name" 
-                name="name" 
-                value="<?=$row['name'] ?>"
-                placeholder="Novo nome">
+                <input type="name" class="form-control" id="name" name="name" value="<?= $row['name'] ?>" placeholder="Novo nome">
             </div>
 
             <div class="form-group">
                 <label for="name">Email</label>
-                <input type="email"
-                 class="form-control" 
-                 id="name" name="email" 
-                 value="<?=$row['email'] ?>"
-                 placeholder="novo valor">
+                <input type="email" class="form-control" id="name" name="email" value="<?= $row['email'] ?>" placeholder="novo valor">
             </div>
-            <input type="text" name="id" value="<?=$row['id'] ?>" hidden>
+            <input type="text" name="id" value="<?= $row['id'] ?>" hidden>
 
             <button type="submit" class="btn btn-primary" name="update">Update</button>
 
